@@ -1,0 +1,18 @@
+.btn--icon {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: inherit;
+  color: var(--dark);
+  border: 0px none;
+  transition: all 2s ease;
+  position: relative;
+  border: 0px;
+  background: none;
+}
+.btn--icon:focus {
+  border: 0px;
+  transform: scale(1.5px);
+}
