@@ -1,0 +1,102 @@
+:root {
+  --default-button-inverted-border: 3px;
+}
+.btn--inverted {
+  background: transparent;
+  background-color: inherit;
+  border: var(--default-button-inverted-border) solid var(--dark);
+  color: var(--dark);
+  transition: all 0.6s ease;
+}
+.btn--inverted:focus {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--dark);
+  box-shadow: inset 0 250px 0 0.01px var(--dark);
+}
+.btn--inverted--primary {
+  color: var(--themePrimary);
+  border: var(--default-button-inverted-border) solid var(--themePrimary);
+  background-color: inherit;
+}
+.btn--inverted--primary:focus {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--themePrimary);
+  box-shadow: inset 0 250px 0 0.01px var(--themePrimary);
+}
+
+.btn--inverted--secondary {
+  color: var(--themeSecondary);
+  border: var(--default-button-inverted-border) solid var(--themeSecondary);
+  background-color: inherit;
+}
+.btn--inverted--secondary:focus {
+  color: var(--dark);
+  border: var(--default-button-inverted-border) solid var(--themeSecondary);
+  box-shadow: inset 0 250px 0 0.01px var(--themeSecondary);
+}
+
+.btn--inverted--success {
+  color: var(--success);
+  border: var(--default-button-inverted-border) solid var(--success);
+  background-color: inherit;
+}
+.btn--inverted--success:focus {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--success);
+  box-shadow: inset 0 250px 0 0.01px var(--success);
+}
+
+.btn--inverted--info {
+  color: var(--info);
+  border: var(--default-button-inverted-border) solid var(--info);
+  background-color: inherit;
+}
+.btn--inverted--info:focus {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--info);
+  box-shadow: inset 0 250px 0 0.01px var(--info);
+}
+
+.btn--inverted--error {
+  color: var(--danger);
+  border: var(--default-button-inverted-border) solid var(--danger);
+  background-color: inherit;
+}
+.btn--inverted--error:focus {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--danger);
+  box-shadow: inset 0 250px 0 0.01px var(--danger);
+}
+
+.btn--inverted--warning {
+  color: var(--warning);
+  border: var(--default-button-inverted-border) solid var(--warning);
+  background-color: inherit;
+}
+.btn--inverted--warning:focus {
+  color: var(--dark);
+  border: var(--default-button-inverted-border) solid var(--warning);
+  box-shadow: inset 0 250px 0 0.01px var(--warning);
+}
+
+.btn--inverted--light {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--light);
+  background-color: inherit;
+}
+.btn--inverted--light:focus {
+  color: var(--dark);
+  border: var(--default-button-inverted-border) solid var(--light);
+  box-shadow: inset 0 250px 0 0.01px var(--light);
+}
+
+.btn--inverted--dark {
+  color: var(--dark);
+  border: var(--default-button-inverted-border) solid var(--dark);
+  background-color: inherit;
+}
+.btn--inverted--dark:focus {
+  color: var(--light);
+  border: var(--default-button-inverted-border) solid var(--dark);
+  box-shadow: inset 0 250px 0 0.01px var(--dark);
+}
