@@ -1,0 +1,8 @@
+.alert {
+  position: relative;
+  margin-bottom: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid transparent;
+  background-color: #212529;
+  color: white;
+}
