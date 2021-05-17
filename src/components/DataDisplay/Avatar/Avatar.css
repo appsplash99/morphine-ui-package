@@ -1,0 +1,77 @@
+:root {
+  --avatar-image-border-radius--circular: 50%;
+  --avatar-image-border-radius--rounded: 20%;
+  --avatar-image-border-radius--square: 0px;
+}
+.avatar-image-circular {
+  border-radius: var(--avatar-image-border-radius--circular);
+}
+.avatar-image-square {
+  border-radius: var(--avatar-image-border-radius--square);
+}
+.avatar-image-rounded {
+  border-radius: var(--avatar-image-border-radius--rounded);
+}
+.avatar__img--xxs {
+  height: 16px;
+  width: 16px;
+}
+.avatar__img--xs {
+  height: 24px;
+  width: 24px;
+}
+.avatar__img--sm {
+  height: 32px;
+  width: 32px;
+}
+.avatar__img--md {
+  height: 48px;
+  width: 48px;
+}
+.avatar__img--lg {
+  height: 64px;
+  width: 64px;
+}
+.avatar__img--xl {
+  height: 96px;
+  width: 96px;
+}
+.avatar__img--xxl {
+  height: 128px;
+  width: 128px;
+}
+.avatar__badge--xxs {
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--light);
+}
+.avatar__badge--xs {
+  width: 7.5px;
+  height: 7.5px;
+  border: 1.6px solid var(--light);
+}
+.avatar__badge--sm {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--light);
+}
+.avatar__badge--md {
+  width: 16px;
+  height: 16px;
+  border: 4px solid var(--light);
+}
+.avatar__badge--lg {
+  width: 17.5px;
+  height: 17.5px;
+  border: 3.5px solid var(--light);
+}
+.avatar__badge--xl {
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--light);
+}
+.avatar__badge--xxl {
+  width: 25px;
+  height: 25px;
+  border: 5px solid var(--light);
+}
