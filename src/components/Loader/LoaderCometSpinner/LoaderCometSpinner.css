@@ -1,0 +1,9 @@
+.loader-comet-spinner {
+  animation: loaderCometSpinnerAnimation 1s infinite linear;
+}
+
+@keyframes loaderCometSpinnerAnimation {
+  to {
+    transform: rotate(1turn)
+  }
+}
