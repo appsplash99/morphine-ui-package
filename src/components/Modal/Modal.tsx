@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { IoIosCloseCircle } from 'react-icons/io';
-import { Btn, BtnIcon, BtnInverted } from '../Button';
+import { BtnIcon } from '../Button';
 import { defaultModalStyle, defaultModalBackdropStyle } from './Modal.styles';
 
 export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
