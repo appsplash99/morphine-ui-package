@@ -10,6 +10,10 @@ export interface InputElementProps
   shape?: 'square' | 'rounded' | 'capsule';
 }
 
+/**
+ * TODO: ADD more styles
+ */
+
 export const InputElement: React.FC<InputElementProps> = ({
   style,
   shape = 'rounded',
