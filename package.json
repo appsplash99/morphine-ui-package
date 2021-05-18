@@ -22,7 +22,9 @@
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "react-icons": ">=4.2.0"
   },
   "husky": {
     "hooks": {
@@ -35,16 +37,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "txdx-default",
+  "name": "morphine-ui",
   "author": "Apurv Chimralwar",
-  "module": "dist/txdx-default.esm.js",
+  "module": "dist/morphine-ui.esm.js",
   "size-limit": [
     {
-      "path": "dist/txdx-default.cjs.production.min.js",
+      "path": "dist/morphine-ui.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/txdx-default.esm.js",
+      "path": "dist/morphine-ui.esm.js",
       "limit": "10 KB"
     }
   ],
@@ -64,6 +66,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-is": "^17.0.2",
+    "rollup-plugin-postcss": "^4.0.0",
     "size-limit": "^4.10.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
