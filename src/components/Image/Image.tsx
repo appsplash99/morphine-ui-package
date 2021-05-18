@@ -1,20 +1,21 @@
 import React from 'react';
-import { imageSizes } from './imageSizes';
 
 export interface ImageProps extends React.HTMLAttributes<HTMLImageElement> {
-  shape?: 'square' | 'rounded' | 'circular';
-  size?: 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
+  shape?: 'square' | 'circular';
   responsive?: boolean;
   src?: string;
   alt?: string;
+  height: number | string;
+  width: number | string;
 }
 
 export const Image: React.FC<ImageProps> = ({
   shape = 'square',
-  size = 'md',
   responsive = false,
   src,
   alt,
+  width,
+  height,
   ...others
 }) => {
   return (
@@ -22,11 +23,10 @@ export const Image: React.FC<ImageProps> = ({
       {...others}
       src={src || 'https://bit.ly/dan-abramov'}
       alt={alt || 'Dan Abramov'}
-      height={`${responsive ? 'auto' : imageSizes[size]}`}
-      width={`${responsive ? 'auto' : imageSizes[size]}`}
+      height={responsive ? 'auto' : `${height}`}
+      width={responsive ? 'auto' : `${width}`}
       className={[
         `${shape === 'square' && 'avatar-image-square'}`,
-        `${shape === 'rounded' && 'avatar-image-rounded'}`,
         `${shape === 'circular' && 'avatar-image-circular'}`,
       ].join(' ')}
     />
