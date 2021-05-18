@@ -39,6 +39,9 @@ const Template: Story<AlertProps> = args => {
 };
 
 export const Default = Template.bind({});
+Default.args = {
+  showAlert: true,
+};
 
 export const ErrorAlert = Template.bind({});
 ErrorAlert.args = {
