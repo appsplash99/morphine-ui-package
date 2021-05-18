@@ -3,6 +3,7 @@
  */
 export { Btn, BtnIcon, BtnInverted, BtnFloating } from './components/Button';
 export { Alert } from './components/Alert';
+export { Image } from './components/Image';
 export { Avatar, DataBadgeIcon } from './components/DataDisplay';
 export {
   LoaderBouncing,
