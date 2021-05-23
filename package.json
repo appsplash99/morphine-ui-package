@@ -38,6 +38,21 @@
     "trailingComma": "es5"
   },
   "name": "morphine-ui",
+  "description": "A React component library to Design React apps painlessly",
+  "keywords": [
+    "react",
+    "component-library",
+    "package",
+    "reactjs",
+    "design-systems",
+    "javascript",
+    "react-components",
+    "ui-components",
+    "uikit",
+    "ui-library",
+    "storybook",
+    "morphine-ui"
+  ],
   "author": "Apurv Chimralwar",
   "module": "dist/morphine-ui.esm.js",
   "size-limit": [
@@ -53,6 +68,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@size-limit/preset-small-lib": "^4.10.2",
+    "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.2.9",
