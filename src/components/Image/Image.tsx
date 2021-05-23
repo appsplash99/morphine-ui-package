@@ -5,8 +5,8 @@ export interface ImageProps extends React.HTMLAttributes<HTMLImageElement> {
   responsive?: boolean;
   src?: string;
   alt?: string;
-  height: number | string;
-  width: number | string;
+  height?: number | string;
+  width?: number | string;
 }
 
 export const Image: React.FC<ImageProps> = ({

@@ -26,7 +26,6 @@ CustomImage.args = {
   src: 'https://bit.ly/sage-adebayo',
   alt: 'Segun Adebayo',
   shape: 'circular',
-  size: 'md',
   height: '80px',
   width: '80px',
   style: { boxShadow: '0 0 20px -10px hsl(187deg 97% 24%)' },
