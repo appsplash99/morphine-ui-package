@@ -1,0 +1,1 @@
+export { ProductCardVertical } from "./ProductCardVertical";
