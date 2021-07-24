@@ -6,6 +6,8 @@ import './ProductCardVertical.css';
 export interface ProductCardVerticalProps {
   numberOfRatings?: string | number;
   handleAddToWishlist?: () => void;
+  handleGoToWishlist?: () => void;
+  handleGoToProductDetail?: () => void;
   handleAddToCart?: () => void;
   handleGoToCart?: () => void;
   discount?: string | number;
@@ -34,16 +36,23 @@ export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
   mrp,
   isWishlistItem,
   handleAddToWishlist,
+  handleGoToWishlist,
   isCartItem,
   addToCartBtn,
   handleAddToCart,
+  handleGoToProductDetail,
   goToCartBtn,
   handleGoToCart,
 }) => {
   return (
     <div className="product-card">
       <div className="product-cardPosition flex flex--column">
-        <img className="product__image" src={image} alt="" />
+        <img
+          className="product__image cursor--pointer"
+          src={image}
+          alt={name}
+          onClick={handleGoToProductDetail}
+        />
         {sale && (
           <div className="label--sale label--salePosition text--md px--md">
             SALE
@@ -65,13 +74,16 @@ export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
                 {description}
               </div>
             </div>
-            <BtnIcon onClick={handleAddToWishlist} size="lg">
-              {isWishlistItem ? (
+
+            {isWishlistItem ? (
+              <BtnIcon size="lg" onClick={handleGoToWishlist}>
                 <FaHeart className="text--danger text--xl" />
-              ) : (
+              </BtnIcon>
+            ) : (
+              <BtnIcon size="lg" onClick={handleAddToWishlist}>
                 <FaRegHeart className="text--danger text--xl" />
-              )}
-            </BtnIcon>
+              </BtnIcon>
+            )}
           </div>
           <div className="flex flex-wrap--wrap align-items--c gap--xxs text--sm">
             <span className="font-weight--600">{`₹ ${price}`}</span>
