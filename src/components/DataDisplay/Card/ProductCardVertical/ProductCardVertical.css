@@ -34,3 +34,9 @@
   right: calc(-1 * var(--space-md));
   /* right: var(--space-md); */
 }
+
+.icons--containerPosition {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+}
