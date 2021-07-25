@@ -38,16 +38,13 @@ export const Default = Template.bind({});
 // Default.args = {
 // }
 
-export const CardWithData = Template.bind({});
-CardWithData.args = {
-  // id:
+const nonBooleanValues = {
   name: 'Product Name',
   description: 'THis is a Product Description.',
   image: productImage,
   price: '599',
   mrp: Math.round((599 * 100) / (100 - 599)),
   discount: 20,
-  sale: true,
   rating: 2,
   numberOfRatings: 30,
   handleGoToProductDetail: () => {
@@ -59,4 +56,44 @@ CardWithData.args = {
   handleGoToWishlist: () => {
     console.log('Go TO Wishlist');
   },
+};
+
+export const OutOfStockProduct = Template.bind({});
+OutOfStockProduct.args = {
+  // id:
+  ...nonBooleanValues,
+  sale: false,
+  inStock: false,
+  isNewProduct: false,
+  fastDelivery: false,
+};
+
+export const SaleProduct = Template.bind({});
+SaleProduct.args = {
+  // id:
+  ...nonBooleanValues,
+  sale: true,
+  inStock: true,
+  isNewProduct: false,
+  fastDelivery: false,
+};
+
+export const NewProduct = Template.bind({});
+NewProduct.args = {
+  // id:
+  ...nonBooleanValues,
+  sale: false,
+  inStock: true,
+  isNewProduct: true,
+  fastDelivery: false,
+};
+
+export const fastDeliveryProduct = Template.bind({});
+fastDeliveryProduct.args = {
+  // id:
+  ...nonBooleanValues,
+  sale: false,
+  inStock: true,
+  isNewProduct: false,
+  fastDelivery: true,
 };

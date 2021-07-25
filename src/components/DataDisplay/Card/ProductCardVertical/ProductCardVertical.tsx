@@ -1,5 +1,12 @@
 import React from 'react';
-import { FaHeart, FaRegHeart, FaStar, FaShoppingCart } from 'react-icons/fa';
+import {
+  FaHeart,
+  FaRegHeart,
+  FaStar,
+  FaShoppingCart,
+  FaShippingFast,
+} from 'react-icons/fa';
+import { SiHellofresh } from 'react-icons/si';
 import { Btn, BtnIcon, BtnInverted } from '../../../Button';
 import './ProductCardVertical.css';
 
@@ -22,6 +29,9 @@ export interface ProductCardVerticalProps {
   goToCartBtn?: React.ReactNode | JSX.Element | React.FC;
   isWishlistItem?: boolean;
   isCartItem?: boolean;
+  inStock?: boolean;
+  fastDelivery?: boolean;
+  isNewProduct?: boolean;
 }
 
 export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
@@ -43,6 +53,9 @@ export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
   handleGoToProductDetail,
   goToCartBtn,
   handleGoToCart,
+  inStock,
+  fastDelivery,
+  isNewProduct,
 }) => {
   return (
     <div className="product-card">
@@ -58,6 +71,12 @@ export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
             SALE
           </div>
         )}
+        <div className="icons--containerPosition flex flex--column align-items--c justify-content--c gap--xs">
+          {fastDelivery && (
+            <FaShippingFast className="text--xxl text--primary" />
+          )}
+          {isNewProduct && <SiHellofresh className="text--xxl text--dark" />}
+        </div>
         <div className="product__content flex flex--column gap--xxs p--xs">
           <div className="flex justify-content--sb">
             <div className="text--sm">
@@ -74,7 +93,6 @@ export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
                 {description}
               </div>
             </div>
-
             {isWishlistItem ? (
               <BtnIcon size="lg" onClick={handleGoToWishlist}>
                 <FaHeart className="text--danger text--xl" />
@@ -102,35 +120,51 @@ export const ProductCardVertical: React.FC<ProductCardVerticalProps> = ({
           )}
         </div>
       </div>
-      {!isCartItem
-        ? addToCartBtn || (
-            <BtnInverted
-              size="sm"
-              shape="square"
-              variant="primary"
-              style={{ width: '100%', fontWeight: 500 }}
-              onClick={handleAddToCart}
-            >
-              <div className="flex align-items--c justify-content--c gap">
-                <FaShoppingCart className="text--md" />
-                Add to Cart
-              </div>
-            </BtnInverted>
-          )
-        : goToCartBtn || (
-            <Btn
-              size="sm"
-              shape="square"
-              variant="primary"
-              style={{ width: '100%', fontWeight: 500 }}
-              onClick={handleGoToCart}
-            >
-              <div className="flex align-items--c justify-content--c gap">
-                <FaShoppingCart className="text--md" />
-                Go To Cart
-              </div>
-            </Btn>
-          )}
+      {inStock && (
+        <div>
+          {!isCartItem
+            ? addToCartBtn || (
+                <BtnInverted
+                  size="sm"
+                  shape="square"
+                  variant="primary"
+                  style={{ width: '100%', fontWeight: 500 }}
+                  onClick={handleAddToCart}
+                >
+                  <div className="flex align-items--c justify-content--c gap">
+                    <FaShoppingCart className="text--md" />
+                    Add to Cart
+                  </div>
+                </BtnInverted>
+              )
+            : goToCartBtn || (
+                <Btn
+                  size="sm"
+                  shape="square"
+                  variant="primary"
+                  style={{ width: '100%', fontWeight: 500 }}
+                  onClick={handleGoToCart}
+                >
+                  <div className="flex align-items--c justify-content--c gap">
+                    <FaShoppingCart className="text--md" />
+                    Go To Cart
+                  </div>
+                </Btn>
+              )}
+        </div>
+      )}
+      {!inStock && (
+        <div>
+          <Btn
+            size="sm"
+            shape="square"
+            style={{ width: '100%', fontWeight: 500, cursor: 'no-drop' }}
+            disableRipple={true}
+          >
+            Out of Stock
+          </Btn>
+        </div>
+      )}
     </div>
   );
 };
