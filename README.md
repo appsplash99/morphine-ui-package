@@ -16,7 +16,7 @@ A [React](https://reactjs.org/) component library to **_design web apps painless
 
 ## **morphine ui - Now Available on NPM**
 
-## 📘 [Documentation](https://60f056a15e552d00398efd82-qiopxcszge.chromatic.com/)
+## 📘 [Documentation](https://60f056a15e552d00398efd82-mazrbkkjvt.chromatic.com/)
 
 Deployed Storybook Docs Site
 
