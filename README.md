@@ -31,3 +31,8 @@ $ npm i morphine-ui
 // using yarn
 $ yarn add morphine-ui
 ```
+
+## Key Features:
+  - type safety and auto suggestions for props while using the library
+  - Utility First components - inspired from material-ui
+  - Utility css classes- inspired from tailwindcss
